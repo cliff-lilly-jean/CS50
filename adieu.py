@@ -1,17 +1,17 @@
 def main():
 
     import inflect
-    import keyboard
 
-    # ask the user for names, one per line until control-d is input
+    names = []
+    sentence = inflect.engine()
 
-
-    while True:
-        if keyboard.is_pressed("a"):
-            print("pressed v")
-            break
-
-
+    try:
+        while True:
+            line = input("Name: ")
+            names.append(line)
+    except EOFError:
+        sentence.join(names)
+        print(f"\n Adieu, adieu, to {sentence.join(names)}")
 
 
 
