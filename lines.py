@@ -9,6 +9,8 @@ def main():
     else:
         print("good")
 
+    # check the file exists, else sys.exit()
+
     # check the file ends in .py, else sys.exit()
     if sys.argv[1].endswith(".py"):
         print("Correct format")
@@ -16,7 +18,7 @@ def main():
         sys.exit()
 
 
-     # check the file exists, else sys.exit()
+
 
     # check for #,  skip
     # check for whitespace, skip
